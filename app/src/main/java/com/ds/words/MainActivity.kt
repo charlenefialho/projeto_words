@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Button
+import android.widget.EditText
 
 const val EXTRA_MESSAGE ="com.ds.words.MESSAGE"
 class MainActivity : AppCompatActivity() {
@@ -13,11 +14,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
     }
     fun sendMessage(view: View){
-        val button = findViewById<Button>(R.id.button)
-        /*val intent = Intent(this,DisplayMessageActivity::class.java).apply{
+        val editText = findViewById<EditText>(R.id.editText)
+        val message = editText.text.toString()
+        val intent = Intent(this,DisplayMessageActivity::class.java).apply{
             putExtra(EXTRA_MESSAGE, message)
         }
-        startActivity(intent)*/
+        startActivity(intent)
 
     }
 }
